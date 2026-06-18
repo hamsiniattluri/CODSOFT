@@ -1,0 +1,67 @@
+import cv2
+import face_recognition
+import os
+
+# ================== Load Known Faces ==================
+KNOWN_FACES_DIR = "known_faces"
+known_encodings = {}
+print("Loading known faces...")
+
+for person in os.listdir(KNOWN_FACES_DIR):
+    person_dir = os.path.join(KNOWN_FACES_DIR, person)
+    if os.path.isdir(person_dir):
+        encodings = []
+        for img_file in os.listdir(person_dir):
+            img_path = os.path.join(person_dir, img_file)
+            try:
+                image = face_recognition.load_image_file(img_path)
+                enc = face_recognition.face_encodings(image)
+                if enc:
+                    encodings.append(enc[0])
+            except:
+                pass
+        if encodings:
+            known_encodings[person] = encodings
+
+print("✅ Loaded:", list(known_encodings.keys()))
+
+# ================== Start Webcam ==================
+video_capture = cv2.VideoCapture(0)
+print("🎥 Webcam started... Press 'q' to quit")
+
+while True:
+    ret, frame = video_capture.read()
+    if not ret:
+        break
+
+    # Resize for faster processing
+    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+    rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
+
+    face_locations = face_recognition.face_locations(rgb_small_frame)
+    face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
+
+    for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+        name = "Unknown"
+        for person, encodings in known_encodings.items():
+            matches = face_recognition.compare_faces(encodings, face_encoding, tolerance=0.55)
+            if True in matches:
+                name = person
+                break
+
+        # Scale back locations
+        top *= 4
+        right *= 4
+        bottom *= 4
+        left *= 4
+
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
+        cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+
+    cv2.imshow("Face Recognition - Webcam", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+video_capture.release()
+cv2.destroyAllWindows()
