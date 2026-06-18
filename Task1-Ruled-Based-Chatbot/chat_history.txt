@@ -1,0 +1,220 @@
+You: hello
+Bot: Hey!
+
+You: hi
+Bot: Hello!
+
+You: good
+Bot: Sorry, I don't understand.
+
+You: help
+Bot: 
+Available Commands:
+
+hello
+how are you
+your name
+python
+ai
+date
+time
+joke
+calculate 5+10
+help
+bye
+
+
+You: joke
+Bot: Why do programmers love Python? Because it's easy to read!
+
+You: 15+10
+Bot: Sorry, I don't understand.
+
+You: 5+10
+Bot: Sorry, I don't understand.
+
+You: calculate 5+10
+Bot: Answer = 15
+
+You: help
+Bot: 
+Available Commands:
+
+hello
+how are you
+your name
+python
+ai
+date
+time
+joke
+calculate 5+10
+help
+bye
+
+
+You: cakculate 5+10
+Bot: Sorry, I don't understand.
+
+You: calculate 5+10
+Bot: Answer = 15
+
+You: time
+Bot: Current time is 12:28:49
+
+You: python
+Bot: Python is a powerful programming language.
+
+You: your name
+Bot: My name is RuleBot.
+
+You: joke
+Bot: Why was the Java developer sad? Because he didn't get a class!
+
+You: help
+Bot: 
+Available Commands:
+
+hello
+how are you
+your name
+python
+ai
+date
+time
+joke
+calculate 5+10
+help
+bye
+
+
+You: hello
+Bot: Hello!
+
+You: how are you
+Bot: I am fine. How are you?
+
+You: your name
+Bot: My name is RuleBot.
+
+You: python
+Bot: Python is a powerful programming language.
+
+You: ai
+Bot: AI stands for Artificial Intelligence.
+
+You: date
+Bot: Today's date is 05-06-2026
+
+You: time
+Bot: Current time is 12:37:23
+
+You: joke
+Bot: Why do programmers love Python? Because it's easy to read!
+
+You: calculate 5+10
+Bot: Answer = 15
+
+You: bye
+Bot: Goodbye!
+
+You: good evening
+Bot: Sorry, I don't understand.
+
+You: help
+Bot: 
+Available Commands:
+
+hello
+how are you
+your name
+python
+ai
+date
+time
+joke
+calculate 5+10
+help
+bye
+
+
+You: hello
+Bot: Hi there!
+
+You: how are you
+Bot: I am fine. How are you?
+
+You: your name
+Bot: My name is RuleBot.
+
+You: python
+Bot: Python is a powerful programming language.
+
+You: ai
+Bot: AI stands for Artificial Intelligence.
+
+You: date
+Bot: Today's date is 05-06-2026
+
+You: time
+Bot: Current time is 12:49:26
+
+You: joke
+Bot: Why do programmers love Python? Because it's easy to read!
+
+You: calulate 5+10
+Bot: Sorry, I don't understand.
+
+You: bye
+Bot: Goodbye!
+
+You: good evening
+Bot: Sorry, I don't understand.
+
+You: help
+Bot: 
+Available Commands:
+
+hello
+how are you
+your name
+python
+ai
+date
+time
+joke
+calculate 5+10
+help
+bye
+
+
+You: hello
+Bot: Hi there!
+
+You: how are you
+Bot: I am fine. How are you?
+
+You: your name
+Bot: My name is RuleBot.
+
+You: python
+Bot: Python is a powerful programming language.
+
+You: ai
+Bot: AI stands for Artificial Intelligence.
+
+You: date
+Bot: Today's date is 05-06-2026
+
+You: time
+Bot: Current time is 12:58:24
+
+You: joke
+Bot: Why did the computer go to the doctor? It caught a virus!
+
+You: calculate 5+10
+Bot: Answer = 15
+
+You: bye
+Bot: Goodbye!
+
